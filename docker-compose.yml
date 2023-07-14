@@ -1,0 +1,12 @@
+version: '3'
+services:
+  dero-miner:
+    image: hansen333/dero-miner:latest
+    environment:
+      - DERO_WALLET=deroi1qyzlxxgq2weyqlxg5u4tkng2lf5rktwanqhse2hwm577ps22zv2x2q9pvfz92x6vrtjz7n6py5sqjmf585
+      - DAEMON_RPC_ADDRESS=community-pools.mysrv.cloud:10300
+      - MINING_THREADS=4
+      - WORKER_NAME=docker
+    deploy:
+      replicas: 1
+    restart: always
